@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/logout_menu_button"
+        android:title="Logout"
+        android:orderInCategory="2">
+    </item>
+
+    <item
+        android:id="@+id/select_theme_button"
+        android:title="Select Theme"
+        android:orderInCategory="1">
+    </item>
+</menu>
