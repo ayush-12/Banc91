@@ -4,5 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorFloatButton">#ffffff</color>
+    <color name="colorPrimaryFor">#333132</color>
+    <color name="colorPrimaryDarkForFark">#333132</color>
 
 </resources>

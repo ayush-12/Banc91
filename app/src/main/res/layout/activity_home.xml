@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/background_color"
     tools:context=".View.HomeActivity">
 
 
@@ -17,7 +18,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
         android:src="@drawable/money_64"
-        app:backgroundTint="@color/colorFloatButton"/>
+        app:backgroundTint="?attr/button_background_color"/>
 
 
 </RelativeLayout>

@@ -1,8 +1,12 @@
 package com.assignment.banc91.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,6 +28,13 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityCon
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
+            setTheme(R.style.darkTheme);
+        }
+        else{
+            setTheme(R.style.AppTheme);
+
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -58,9 +69,18 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityCon
                 break;
             }
             case R.id.select_theme_button: {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                startActivity(new Intent(this,LoginActivity.class));
+                finish();
+
                 break;
             }
         }
         return true;
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
     }
 }
