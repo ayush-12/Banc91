@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toLeftOf="@id/amount_text_view">
+
+        <TextView
+            android:id="@+id/transaction_id_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="778768"
+            android:textSize="16sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/transaction_date_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="12/02/2020"
+            android:textSize="14sp">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/amount_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="3634"
+        android:textSize="16sp">
+
+    </TextView>
+
+</RelativeLayout>

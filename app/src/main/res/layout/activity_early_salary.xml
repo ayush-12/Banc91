@@ -7,4 +7,37 @@
     android:background="?attr/background_color"
     tools:context=".View.EarlySalaryActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Salary available to credit">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/early_salary_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="20000">
+        </TextView>
+
+        <Button
+            android:id="@+id/avail_salary_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+
+    </LinearLayout>
 </RelativeLayout>

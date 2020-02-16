@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "369984355029",
+    "firebase_url": "https://testbanc91.firebaseio.com",
+    "project_id": "testbanc91",
+    "storage_bucket": "testbanc91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369984355029:android:07db3a670c6891b049805c",
+        "android_client_info": {
+          "package_name": "com.assignment.banc91"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369984355029-av9n3pvcn8iego3fg69egt02o7q1ga63.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuVlKoMC3Q7swQUF6dlVBDcHeaTcn6pK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369984355029-av9n3pvcn8iego3fg69egt02o7q1ga63.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

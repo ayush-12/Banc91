@@ -35,6 +35,11 @@ public class EarlySalaryActivityPresenter implements EarlySalaryActivityContract
     }
 
     @Override
+    public double getEarlySalaryFromModel(double salary) {
+        return model.calculateEarlySalary(salary);
+    }
+
+    @Override
     public EarlySalaryActivity getActivityFromView() {
         return mView.returnActivity();
     }

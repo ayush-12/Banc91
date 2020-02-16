@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.assignment.banc91.Common.CommonClass;
 import com.assignment.banc91.Contract.EarlySalaryActivityContract;
@@ -15,6 +17,11 @@ public class EarlySalaryActivity extends AppCompatActivity implements EarlySalar
 
     private EarlySalaryActivityPresenter mPresenter;
 
+    private Button availSalaryButton;
+    private TextView earlySalaryAmountTextView;
+
+    private double salary =30000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         CommonClass commonClass = new CommonClass(this);
@@ -23,11 +30,16 @@ public class EarlySalaryActivity extends AppCompatActivity implements EarlySalar
         setContentView(R.layout.activity_early_salary);
 
         mPresenter=new EarlySalaryActivityPresenter(this,this);
+        double earlySalary = mPresenter.getEarlySalaryFromModel(salary);
+        if(earlySalary>0){
+            earlySalaryAmountTextView.setText(String.valueOf(earlySalary));
+        }
     }
 
     @Override
     public void initView() {
-
+        earlySalaryAmountTextView = findViewById(R.id.early_salary_text_view);
+        availSalaryButton =findViewById(R.id.avail_salary_button);
     }
 
     @Override

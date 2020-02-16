@@ -3,11 +3,14 @@ package com.assignment.banc91.Presenter;
 import android.content.Context;
 import android.content.Intent;
 
+import com.assignment.banc91.Common.CardDetails;
 import com.assignment.banc91.Contract.HomeActivityContract;
 import com.assignment.banc91.Model.HomeActivityModel;
 import com.assignment.banc91.R;
 import com.assignment.banc91.View.EarlySalaryActivity;
 import com.assignment.banc91.View.HomeActivity;
+
+import java.util.List;
 
 public class HomeActivityPresenter implements HomeActivityContract.Presenter {
     private final String TAG = "HomePresenter";
@@ -40,6 +43,26 @@ public class HomeActivityPresenter implements HomeActivityContract.Presenter {
     @Override
     public void callModelToLogoutUser() {
         model.logoutUser();
+    }
+
+    @Override
+    public void callGetData() {
+        model.getData();
+    }
+
+    @Override
+    public void passDataToViewToSet(List<CardDetails> cardDetails) {
+        mView.setViews(cardDetails);
+    }
+
+    @Override
+    public void callModelToCheckDateForEarlySalary() {
+        if(model.checkDateForEarlySalary()){
+            mView.showEarlySalaryButton();
+        }
+        else {
+            mView.hideEarlySalaryButton();
+        }
     }
 
     @Override

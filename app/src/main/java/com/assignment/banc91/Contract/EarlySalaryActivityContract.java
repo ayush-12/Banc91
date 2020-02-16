@@ -13,13 +13,18 @@ public interface EarlySalaryActivityContract {
 
     interface Model{
         void logoutUser();
+
+        double calculateEarlySalary(double salary);
     }
 
     interface Presenter{
         void onClick(android.view.View view);
         void callModelToLogoutUser();
+        double getEarlySalaryFromModel(double salary);
+
 
         EarlySalaryActivity getActivityFromView();
+
     }
 
 
