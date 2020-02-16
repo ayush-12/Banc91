@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.assignment.banc91.Contract.EarlySalaryActivityContract;
 import com.assignment.banc91.Model.EarlySalaryActivityModel;
+import com.assignment.banc91.View.EarlySalaryActivity;
 
 public class EarlySalaryActivityPresenter implements EarlySalaryActivityContract.Presenter {
 
@@ -26,5 +27,15 @@ public class EarlySalaryActivityPresenter implements EarlySalaryActivityContract
 
     @Override
     public void onClick(android.view.View view) {
+    }
+
+    @Override
+    public void callModelToLogoutUser() {
+        model.logoutUser();
+    }
+
+    @Override
+    public EarlySalaryActivity getActivityFromView() {
+        return mView.returnActivity();
     }
 }

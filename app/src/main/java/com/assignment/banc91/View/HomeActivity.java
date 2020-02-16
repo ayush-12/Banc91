@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.assignment.banc91.Common.CommonClass;
 import com.assignment.banc91.Contract.HomeActivityContract;
 import com.assignment.banc91.Presenter.HomeActivityPresenter;
 import com.assignment.banc91.R;
@@ -21,13 +22,8 @@ public class HomeActivity extends AppCompatActivity implements HomeActivityContr
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
-            setTheme(R.style.darkTheme);
-        }
-        else{
-            setTheme(R.style.AppTheme);
-
-        }
+        CommonClass commonClass = new CommonClass(this);
+        commonClass.setTheme();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
@@ -47,8 +43,15 @@ public class HomeActivity extends AppCompatActivity implements HomeActivityContr
     }
 
     @Override
+    public HomeActivity returnActivity() {
+        return this;
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_item, menu);
+        MenuItem menuItem = menu.findItem(R.id.select_theme_button);
+        menuItem.setVisible(false);
         return true;
     }
 
@@ -57,11 +60,10 @@ public class HomeActivity extends AppCompatActivity implements HomeActivityContr
 
         switch (item.getItemId()) {
             case R.id.logout_menu_button: {
+                mPresenter.callModelToLogoutUser();
                 break;
             }
-            case R.id.select_theme_button: {
-                break;
-            }
+
         }
         return true;
     }

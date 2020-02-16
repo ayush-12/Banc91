@@ -30,9 +30,26 @@ public class LoginActivityPresenter implements LoginActivityContract.Presenter {
     @Override
     public void onClick(android.view.View view) {
         if (view.getId() == R.id.login_button) {
-            Intent intent = new Intent(mContext, HomeActivity.class) ;
-            mContext.startActivity(intent);
+            if(model.validateMobileNumber(mView.getMobileNumber())){
+                model.setUserLoggedIn();
+                goToHomeActivity();
+            }
+            else {
+                mView.setErrorIfMobileNumberNotValid("Not valid");
+            }
         }
+    }
+
+    @Override
+    public void goToHomeActivity() {
+        Intent intent = new Intent(mContext, HomeActivity.class);
+        mContext.startActivity(intent);
+        mView.finishActivity();
+    }
+
+    @Override
+    public boolean callModelToGetIfUserLoggedIn() {
+        return model.getIfUserLoggedIn();
     }
 
 }
