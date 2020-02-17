@@ -66,6 +66,11 @@ public class HomeActivityPresenter implements HomeActivityContract.Presenter {
     }
 
     @Override
+    public void callModelToBlockCard(String cardNumber) {
+        model.blockCard(cardNumber);
+    }
+
+    @Override
     public HomeActivity getActivityFromView() {
         return mView.returnActivity();
     }

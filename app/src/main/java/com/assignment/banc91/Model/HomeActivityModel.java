@@ -120,6 +120,16 @@ public class HomeActivityModel implements HomeActivityContract.Model {
     }
 
     @Override
+    public void blockCard(final String cardNumber) {
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                cardDetailsSqlDatabase.cardDetailsSqlDAO().blockCard(cardNumber,false);
+            }
+        });
+    }
+
+    @Override
     public boolean checkDateForEarlySalary() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd");
         Date checkDate=null;

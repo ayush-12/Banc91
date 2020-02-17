@@ -18,7 +18,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
         android:src="@drawable/money_24"
-        app:backgroundTint="?attr/button_background_color" />
+        app:backgroundTint="?attr/float_button_bg_color" />
 
 
     <RelativeLayout
@@ -60,26 +60,74 @@
 
     </RelativeLayout>
 
-
-    <Button
-        android:id="@+id/block_card_button"
+    <LinearLayout
+        android:id="@+id/indicator_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Block"
-        android:textColor="?attr/text_color"
+        android:visibility="invisible"
         android:layout_below="@id/card_view_relative_layout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="0dp"
         android:layout_centerHorizontal="true">
 
-    </Button>
+
+        <View
+            android:id="@+id/left_indicator_view"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/circle"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <View
+            android:id="@+id/center_indicator_view"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/circle"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <View
+            android:id="@+id/right_indicator_view"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/circle"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/transactions_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/text_color"
+        android:layout_below="@id/indicator_layout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="invisible"
+        android:text="Transactions">
+
+    </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/transaction_list_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_above="@id/salary_button"
-        android:layout_below="@id/block_card_button">
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/transactions_text_view">
     </androidx.recyclerview.widget.RecyclerView>
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:backgroundTint="?attr/text_color">
+
+    </ProgressBar>
 
 </RelativeLayout>

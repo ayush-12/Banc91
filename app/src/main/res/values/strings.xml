@@ -3,4 +3,9 @@
         <html><font color="#ffffff">Banc</font></html>
         <html><font color="#ffa550">91</font></html>
     </string>
+    <string name="avail">Avail</string>
+    <string name="login">Login</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="salary_available_to_credit">Salary available to credit</string>
+    <string name="block_card">Block Card</string>
 </resources>

@@ -19,7 +19,6 @@
             android:id="@+id/mobile_number_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:gravity="center_vertical"
@@ -40,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:hint="Mobile Number"
+                android:hint="@string/mobile_number"
                 android:textColorHint="?attr/text_color"
                 android:textColor="?attr/text_color"
                 android:inputType="phone">
@@ -53,10 +52,10 @@
             android:id="@+id/login_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Login"
+            android:layout_margin="20dp"
+            android:text="@string/login"
             android:textColor="?attr/text_color"
-            android:background="?attr/edit_text_bg_color">
+            android:background="@drawable/button_color">
 
         </Button>
     </LinearLayout>

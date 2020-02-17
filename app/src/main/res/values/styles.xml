@@ -7,10 +7,16 @@
         <item name="colorPrimary">#86c5da</item>
         <item name="colorPrimaryDark">#86c5da</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="background_color">#ffffff</item>
+        <item name="background_color">#fff3f3f3</item>
         <item name="text_color">#000000</item>
         <item name="edit_text_bg_color">#ffffff</item>
-        <item name="button_background_color">#ffffff</item>
+        <item name="button_background_color">#86c5da</item>
+        <item name="list_item_bg_color">#ffffff</item>
+        <item name="card_bg_color">#80D8FF</item>
+        <item name="float_button_bg_color">#ffffff</item>
+        <item name="_block_button_background_color">#FF1744</item>
+        <item name="circle_bg_color">#808080</item>
+        <item name="selected_circle_bg_color">#86c5da</item>
     </style>
 
     <!-- Night/Dark Mode theme. -->
@@ -22,9 +28,14 @@
         <item name="background_color">#000000</item>
         <item name="text_color">#ffffff</item>
         <item name="edit_text_bg_color">#333132</item>
-        <item name="button_background_color">#000000</item>
+        <item name="button_background_color">#808080</item>
+        <item name="list_item_bg_color">#333132</item>
+        <item name="card_bg_color">#808080</item>
+        <item name="float_button_bg_color">#ffffff</item>
+        <item name="_block_button_background_color">#FF1744</item>
+        <item name="circle_bg_color">#333132</item>
+        <item name="selected_circle_bg_color">#808080</item>
     </style>
-
 
 
 

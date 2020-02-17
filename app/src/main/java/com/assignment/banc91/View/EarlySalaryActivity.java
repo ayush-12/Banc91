@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.assignment.banc91.Common.CommonClass;
 import com.assignment.banc91.Contract.EarlySalaryActivityContract;
@@ -30,7 +32,7 @@ public class EarlySalaryActivity extends AppCompatActivity implements EarlySalar
         setContentView(R.layout.activity_early_salary);
 
         mPresenter=new EarlySalaryActivityPresenter(this,this);
-        double earlySalary = mPresenter.getEarlySalaryFromModel(salary);
+        double earlySalary = Math.round(mPresenter.getEarlySalaryFromModel(salary) * 100.0) / 100.0;
         if(earlySalary>0){
             earlySalaryAmountTextView.setText(String.valueOf(earlySalary));
         }
@@ -40,6 +42,13 @@ public class EarlySalaryActivity extends AppCompatActivity implements EarlySalar
     public void initView() {
         earlySalaryAmountTextView = findViewById(R.id.early_salary_text_view);
         availSalaryButton =findViewById(R.id.avail_salary_button);
+        availSalaryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(EarlySalaryActivity.this, "Salary will be credited soon",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

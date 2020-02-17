@@ -13,6 +13,9 @@ public interface HomeActivityContract {
         void setTxnListView(List<CardDetails> cardDetails);
         void hideEarlySalaryButton();
         void showEarlySalaryButton();
+        void hideProgressBar();
+        void showProgressBar();
+        void blockCard();
 
         HomeActivity returnActivity();
     }
@@ -21,7 +24,7 @@ public interface HomeActivityContract {
         void logoutUser();
         void getData();
         void setDataInLocal(List<CardDetails> cardDetailsList);
-
+        void blockCard(String cardNumber);
         boolean checkDateForEarlySalary();
     }
 
@@ -31,7 +34,7 @@ public interface HomeActivityContract {
         void callGetData();
         void passDataToViewToSet(List<CardDetails> cardDetails);
         void callModelToCheckDateForEarlySalary();
-
+        void callModelToBlockCard(String cardNumber);
         HomeActivity getActivityFromView();
 
     }

@@ -3,14 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/imageMultipleViewLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?attr/card_bg_color">
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cardBackgroundColor="?attr/edit_text_bg_color">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="?attr/card_bg_color">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -20,7 +22,6 @@
                 android:id="@+id/card_number_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
                 android:gravity="center"
                 android:textColor="?attr/text_color">
 
@@ -59,42 +60,79 @@
                 </TextView>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/cvv_layout"
-                android:layout_width="match_parent"
+            <RelativeLayout
+                android:id="@+id/cvv_relative_layout"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/expiry_layout"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:textColor="?attr/text_color">
+                android:layout_centerHorizontal="true">
 
-                <TextView
-                    android:id="@+id/cvv_title_text_view"
+                <LinearLayout
+                    android:id="@+id/cvv_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="cvv"
+                    android:gravity="center"
+                    android:orientation="horizontal"
                     android:textColor="?attr/text_color">
 
-                </TextView>
+                    <TextView
+                        android:id="@+id/cvv_title_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="cvv"
+                        android:textColor="?attr/text_color">
 
-                <TextView
-                    android:id="@+id/cvv_text_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="***"
-                    android:textColor="?attr/text_color">
+                    </TextView>
 
-                </TextView>
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/cvv_text_view"
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:text="888"
+                        android:textColor="?attr/text_color">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/show_image_view"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/cvv_layout"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/eye">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/hide_image_view"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/cvv_layout"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/hide"
+                    android:visibility="invisible">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+
             <LinearLayout
                 android:id="@+id/card_status_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cvv_layout"
+                android:layout_below="@id/cvv_relative_layout"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:textColor="?attr/text_color">
@@ -121,8 +159,26 @@
 
                 </TextView>
             </LinearLayout>
+
+
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
+    <Button
+        android:id="@+id/block_card_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/card_view"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:visibility="invisible"
+        android:background="?attr/_block_button_background_color"
+        android:text="@string/block_card"
+        android:textAllCaps="false"
+        android:textColor="#ffffff">
+
+    </Button>
 
 </android.widget.RelativeLayout>

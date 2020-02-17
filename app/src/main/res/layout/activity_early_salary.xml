@@ -19,7 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Salary available to credit">
+            android:textColor="?attr/text_color"
+            android:text="@string/salary_available_to_credit">
 
         </TextView>
 
@@ -28,13 +29,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
+            android:textColor="?attr/text_color"
             android:text="20000">
         </TextView>
 
         <Button
             android:id="@+id/avail_salary_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:text="@string/avail"
+            android:textColor="?attr/text_color"
+            android:textAllCaps="false"
+            android:background="@drawable/button_color">
 
         </Button>
 

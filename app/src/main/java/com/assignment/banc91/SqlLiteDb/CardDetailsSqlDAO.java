@@ -21,5 +21,8 @@ public interface CardDetailsSqlDAO {
     @Query("SELECT * FROM CardDetailsSql Where cardNumber =:cardNumber ")
     public List<CardDetailsSql> getData(String cardNumber);
 
+    @Query("Update carddetailssql Set isActive =:block where cardNumber=:cardNumber")
+    public void blockCard(String cardNumber,boolean block);
+
 }
 
